@@ -9,19 +9,25 @@ const dataSet = {
     base: ["808", "Synth"]
 };
 
-let randomGenre = dataSet.genre[Math.floor(Math.random() * dataSet.genre.length)];
-let randomInstrument = dataSet.instruments[Math.floor(Math.random() * dataSet.instruments.length)];
-let randomVibe = dataSet.vibe[Math.floor(Math.random() * dataSet.vibe.length)];
-let randomBase = dataSet.base[Math.floor(Math.random() * dataSet.base.length)];
+function randomizedMessage(obj) {
+    //We add various datasets, to choose the randomly generated beat for our project, and choose each data set at random!
+    let randomGenre = obj.genre[Math.floor(Math.random() * obj.genre.length)];
+    let randomInstrument = obj.instruments[Math.floor(Math.random() * obj.instruments.length)];
+    let randomVibe = obj.vibe[Math.floor(Math.random() * obj.vibe.length)];
+    let randomBase = obj.base[Math.floor(Math.random() * obj.base.length)];
 
-let bpmToUse;
+    //We need to guide our producers to be in a certain range for their beats
+    let bpmToUse;
+    if (randomGenre === "Drill" || randomGenre === "Grime" || randomGenre === "Trap" ) {
+        bpmToUse = "BPM range: 125-160";
+    } else {
+        bpmToUse = "BPM range: 70-125";
+    };
 
-if (randomGenre === "Drill" || randomGenre === "Grime" || randomGenre === "Trap" ) {
-    bpmToUse = "BPM range: 125-160";
-} else {
-    bpmToUse = "BPM range: 70-125";
-};
+    //final message 
+    let randomGeneratedBeatIdea = `Make a ${randomGenre} type beat using ${randomInstrument} for main melody and with ${randomBase}. Beat should be ${randomVibe}. \n${bpmToUse}`;
+    return randomGeneratedBeatIdea;
+}
 
-let randomGeneratedBeatIdea = `Make a ${randomGenre} type beat using ${randomInstrument} for main melody and with ${randomBase}. Beat should be ${randomVibe}.`
-console.log(randomGeneratedBeatIdea);
-console.log(bpmToUse);
+
+console.log(randomizedMessage(dataSet));
