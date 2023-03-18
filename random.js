@@ -1,18 +1,10 @@
 // this is a program that will generate a random Hip-hop beat idea for the User
-
-
-
 const dataSet = {
     genre: ["Boom-Bap", "Trap", "Lofi", "OldSchool", "Drill", "Grime", "pop", "Afro-beats", "DanceHall"],
     instruments: ["Piano", "Guitar", "Flute", "Violen", "Saxophone"],
     vibe: ["Chill", "Hard", "Dark", "Melodic", "Romantic", "Aggressive" ],
     base: ["808", "Synth"]
 };
-
-
-
-   
-
 
 function randomizedMessage(obj) {
     //We add various datasets, to choose the randomly generated beat for our project, and choose each data set at random!
