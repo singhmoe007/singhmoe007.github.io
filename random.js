@@ -17,10 +17,11 @@ let randomBase = dataSet.base[Math.floor(Math.random() * dataSet.base.length)];
 let bpmToUse;
 
 if (randomGenre === "Drill" || randomGenre === "Grime" || randomGenre === "Trap" ) {
-    bpmTouse = "BPM range: 125-160";
+    bpmToUse = "BPM range: 125-160";
 } else {
-    bpmTouse = "BPM range: 70-125";
+    bpmToUse = "BPM range: 70-125";
 };
 
 let randomGeneratedBeatIdea = `Make a ${randomGenre} type beat using ${randomInstrument} for main melody and with ${randomBase}. Beat should be ${randomVibe}.`
 console.log(randomGeneratedBeatIdea);
+console.log(bpmToUse);
