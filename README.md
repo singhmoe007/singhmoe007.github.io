@@ -1,10 +1,9 @@
-HIP-HOP Beat Idea Generator
-===========================
-
+#HIP-HOP Beat Idea Generator
+ 
 This project aims to help **Music Producres** struggling with creativity:
 ________________________
-How this Project Works?
------------------------
+###How this Project Works?
+
 1. *It chooses a genre.*
 2. *Selects an instrument.*
 3. *Assigns the mood to the beat and the base to be used.*
