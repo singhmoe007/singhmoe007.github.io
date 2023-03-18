@@ -22,4 +22,5 @@ if (randomGenre === "Drill" || randomGenre === "Grime" || randomGenre === "Trap"
     bpmTouse = "BPM range: 70-125";
 };
 
-let randomGeneratedBeatIdea = `Make a ${randomGenre} beat using ${randomInstrument} for main melody and with ${randomBase}. Beat should be ${vibe}.`
+let randomGeneratedBeatIdea = `Make a ${randomGenre} type beat using ${randomInstrument} for main melody and with ${randomBase}. Beat should be ${randomVibe}.`
+console.log(randomGeneratedBeatIdea);
