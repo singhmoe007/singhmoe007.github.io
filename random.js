@@ -3,9 +3,9 @@
 console.log("Your Randomly generated beat idea is: ")
 
 const dataSet = {
-    genre: ["Boom-Bap", "Trap", "Lofi", "OldSchool", "Drill", "Grime", "R&B", "pop", "Afro-beats", "DanceHall"],
+    genre: ["Boom-Bap", "Trap", "Lofi", "OldSchool", "Drill", "Grime", "pop", "Afro-beats", "DanceHall"],
     instruments: ["Piano", "Guitar", "Flute", "Violen", "Saxophone"],
-    vibe: ["Chill", "Hard", "Dark", "Melodic", "Rock" ],
+    vibe: ["Chill", "Hard", "Dark", "Melodic", "Romantic", "Aggressive" ],
     base: ["808", "Synth"]
 };
 
@@ -14,4 +14,12 @@ let randomInstrument = dataSet.instruments[Math.floor(Math.random() * dataSet.in
 let randomVibe = dataSet.vibe[Math.floor(Math.random() * dataSet.vibe.length)];
 let randomBase = dataSet.base[Math.floor(Math.random() * dataSet.base.length)];
 
-console.log(randomBase);
+let bpmToUse;
+
+if (randomGenre === "Drill" || randomGenre === "Grime" || randomGenre === "Trap" ) {
+    bpmTouse = "BPM range: 125-160";
+} else {
+    bpmTouse = "BPM range: 70-125";
+};
+
+let randomGeneratedBeatIdea = `Make a ${randomGenre} beat using ${randomInstrument} for main melody and with ${randomBase}. Beat should be ${vibe}.`
